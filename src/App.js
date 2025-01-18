@@ -4,7 +4,7 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import PokemonCard from './components/PokemonCard';
 import ComparePokemon from './components/ComparePokemon';
-
+import FilterByType from './components/FilterByType';
 
 function App() {
   const [pokemon, setPokemon] = useState(null);
@@ -38,6 +38,7 @@ function App() {
     <div>
       <Header />
       <SearchBar onSearch={fetchPokemon} />
+      <FilterByType />
       <PokemonCard pokemon={pokemon} />
       <ComparePokemon onCompare={comparePokemon} />
       {comparison && (
